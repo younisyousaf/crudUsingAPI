@@ -11,7 +11,7 @@ function App() {
   }, []);
 
   const fetchData = async () => {
-    await fetch(`https://dummyjson.com/users`)
+    await fetch(`https://dummyjson.com/users?limit=3`)
       .then((response) => response.json())
       .then((data) => setUsers(data.users))
       .catch((err) => {
